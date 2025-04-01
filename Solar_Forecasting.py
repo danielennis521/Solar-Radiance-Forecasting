@@ -1,4 +1,7 @@
 
+import autoregression as ar
+import smoothing as sm
+import harmonic_regression as hr
 import pandas as pd
 import h5pyd
 import numpy as np
