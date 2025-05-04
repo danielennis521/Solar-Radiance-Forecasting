@@ -21,15 +21,17 @@ provided at https://github.com/NREL/hsds-examples/blob/master/notebooks/03_NSRDB
 ##Sarima Fit
 For the SARIMA model we need to choose the number of previous observations to fit, the number of previous errors, and an order of differncing. Since our predictions are only looking ahead an hour to a day the nonstationarity due to seasonal shifts is not noticable so it is reasonable to not use any differencing, i.e. for shorter term forecasting a SARMA model is sufficient. The decay in the autocorrelation of our data can be used to determine how many previous observations we should consider in the autoregressive part of the SARMA model:
 
-![ACF plot](https://github.com/danielennis521/Solar-Radiance-Forecasting/blob/main/model%20fitting/sarima_autocorrelation.png)
+<img src="https://github.com/danielennis521/Solar-Radiance-Forecasting/blob/main/model%20fitting/sarima_autocorrelation.png" alt="ACF plot" width="450" height="325">
 
 So it appears that around 8 previous observations is a reasonable number to use. While the ACF shows much older observations being significant we know this is because of seasonality. Looking at the PACF we see that again using 8 previous errors will be enough:
 
-![PACF plot](https://github.com/danielennis521/Solar-Radiance-Forecasting/blob/main/model%20fitting/sarima_pacf.png)
+<img src="https://github.com/danielennis521/Solar-Radiance-Forecasting/blob/main/model%20fitting/sarima_pacf.png" alt="PACF plot" width="450" height="325">
 
 since our data is in 30 minute intervals the length for the seasonality will be 48. All of this together gives us the information we need to build our model. We can use the statsmodel library to train on several different date ranges. The test predictions pictured below were generated from the sarima_fit.py file in the "model fitting" folder.
 
-![SARIMA fit 1](https://github.com/danielennis521/Solar-Radiance-Forecasting/blob/main/model%20fitting/sarima_single_bin_1.png) ![SARIMA fit 2](https://github.com/danielennis521/Solar-Radiance-Forecasting/blob/main/model%20fitting/sarima_single_bin_2.png) 
+<img src="https://github.com/danielennis521/Solar-Radiance-Forecasting/blob/main/model%20fitting/sarima_single_bin_1.png" alt="SARIMA fit 1" width="750" height="300">
+<img src="https://github.com/danielennis521/Solar-Radiance-Forecasting/blob/main/model%20fitting/sarima_single_bin_2.png" alt="SARIMA fit 2" width="750" height="300">
+
 
 # Predictions and Comparison of the Models
 
