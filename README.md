@@ -38,12 +38,12 @@ There are no parameters we need to fit for this model in the way that we had to 
 <img src="https://github.com/danielennis521/Solar-Radiance-Forecasting/blob/main/model%20fitting/HW_test.png" alt="PACF plot" width="450" height="325">
 
 This gives us the following sum of error magnitudes,
-
-trend-addative, seasonal-addative: 3557.386906549339
-trend-multiplicative, seasonal-multiplicative: 4203.589447259543
-trend-addative, seasonal-multiplicative: 5375.71718618397
-trend-multiplicative, seasonal-addative: 5930.040032760666
-
+  
+  trend-addative, seasonal-addative: 3557.39  
+  trend-multiplicative, seasonal-multiplicative: 4203.60  
+  trend-addative, seasonal-multiplicative: 5375.72  
+  trend-multiplicative, seasonal-addative: 5930.04  
+  
 So we can see that choosing the addative model for all components is the clear winner
 
 # Predictions and Comparison of the Models
