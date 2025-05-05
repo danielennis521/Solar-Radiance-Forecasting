@@ -39,12 +39,12 @@ There are no parameters we need to fit for this model in the way that we had to 
 
 This gives us the following sum of error magnitudes,
   
-trend-addative, seasonal-addative: 3557.39  
-trend-multiplicative, seasonal-multiplicative: 4203.60  
+trend-addative, seasonal-addative: 4203.60  
+trend-multiplicative, seasonal-multiplicative: 3557.39  
 trend-addative, seasonal-multiplicative: 5375.72  
 trend-multiplicative, seasonal-addative: 5930.04  
   
-So we can see that choosing the addative model for all components is the clear winner
+So we can see that choosing the multiplicative model for all components is the clear winner for our data.
 
 # Predictions and Comparison of the Models
 
