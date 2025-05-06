@@ -44,9 +44,11 @@ trend-multiplicative, seasonal-multiplicative: 3557.39
 trend-addative, seasonal-multiplicative: 5375.72  
 trend-multiplicative, seasonal-addative: 5930.04  
   
-So we can see that choosing the multiplicative model for all components is the clear winner for our data.
+So we can see that choosing the multiplicative model for all components is the clear winner for our data, the holt_winter_fit.py file in the "model fitting" folder was used to create the above graph and compute the errors.  
 
 # Predictions and Comparison of the Models
+
+To test the models we'll generate some random starting points, train on two weeks of data from that starting point, then predict the solar intensity for the 15th day.
 
 
 # Conclusion
